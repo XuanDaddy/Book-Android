@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>TextView · GitBook</title>
+        <title>【五】Activity任务栈 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../ImageView/" />
+    <link rel="next" href="Activity 与 Window、PhoneWindow、DecorView 之间的关系.html" />
     
     
-    <link rel="prev" href="../Service/IntentService源码解析.html" />
+    <link rel="prev" href="Activity启动模式.html" />
     
 
     </head>
@@ -199,9 +199,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../Activity/">
+        <li class="chapter " data-level="1.3" data-path="./">
             
-                <a href="../Activity/">
+                <a href="./">
             
                     
                     Activity
@@ -213,9 +213,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../Activity/Activity生命周期.html">
+        <li class="chapter " data-level="1.3.1" data-path="Activity生命周期.html">
             
-                <a href="../Activity/Activity生命周期.html">
+                <a href="Activity生命周期.html">
             
                     
                     【一】Activity生命周期
@@ -226,9 +226,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="../Activity/Activity异常生命周期.html">
+        <li class="chapter " data-level="1.3.2" data-path="Activity异常生命周期.html">
             
-                <a href="../Activity/Activity异常生命周期.html">
+                <a href="Activity异常生命周期.html">
             
                     
                     【二】Activity异常生命周期
@@ -239,9 +239,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="../Activity/进程优先级.html">
+        <li class="chapter " data-level="1.3.3" data-path="进程优先级.html">
             
-                <a href="../Activity/进程优先级.html">
+                <a href="进程优先级.html">
             
                     
                     【三】进程优先级
@@ -252,9 +252,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="../Activity/Activity启动模式.html">
+        <li class="chapter " data-level="1.3.4" data-path="Activity启动模式.html">
             
-                <a href="../Activity/Activity启动模式.html">
+                <a href="Activity启动模式.html">
             
                     
                     【四】Activity启动模式
@@ -265,9 +265,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5" data-path="../Activity/Activity任务栈.html">
+        <li class="chapter active" data-level="1.3.5" data-path="Activity任务栈.html">
             
-                <a href="../Activity/Activity任务栈.html">
+                <a href="Activity任务栈.html">
             
                     
                     【五】Activity任务栈
@@ -278,9 +278,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.6" data-path="../Activity/Activity 与 Window、PhoneWindow、DecorView 之间的关系.html">
+        <li class="chapter " data-level="1.3.6" data-path="Activity 与 Window、PhoneWindow、DecorView 之间的关系.html">
             
-                <a href="../Activity/Activity 与 Window、PhoneWindow、DecorView 之间的关系.html">
+                <a href="Activity 与 Window、PhoneWindow、DecorView 之间的关系.html">
             
                     
                     【六】Activity 与 Window、PhoneWindow、DecorView 之间的关系
@@ -432,9 +432,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5" data-path="./">
+        <li class="chapter " data-level="1.5" data-path="../TextView/">
             
-                <a href="./">
+                <a href="../TextView/">
             
                     
                     TextView
@@ -520,7 +520,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >TextView</a>
+        <a href=".." >【五】Activity任务栈</a>
     </h1>
 </div>
 
@@ -535,7 +535,39 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="textview">TextView</h1>
+                                <h1 id="&#x3010;&#x4E94;&#x3011;activity&#x4EFB;&#x52A1;&#x6808;">&#x3010;&#x4E94;&#x3011;Activity&#x4EFB;&#x52A1;&#x6808;</h1>
+<ul>
+<li><h3 id="&#x9ED8;&#x8BA4;&#x4EFB;&#x52A1;&#x6808;">&#x9ED8;&#x8BA4;&#x4EFB;&#x52A1;&#x6808;</h3>
+</li>
+</ul>
+<blockquote>
+<p>  &#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x542F;&#x52A8;Activity&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x521B;&#x5EFA;&#x5B83;&#x7684;&#x5B9E;&#x4F8B;&#x5E76;&#x628A;&#x5B83;&#x4EEC;&#x4E00;&#x4E00;&#x653E;&#x5165;&#x4EFB;&#x52A1;&#x6808;&#x4E2D;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x5355;&#x51FB;back&#x952E;&#xFF0C;&#x4F1A;&#x53D1;&#x73B0;&#x8FD9;&#x4E9B;Activity&#x4F1A;&#x4E00;&#x4E00;&#x56DE;&#x9000;&#x3002;</p>
+<p>&#x200B;    (&#x52A8;&#x4F5C;&#x8BBE;&#x7F6E;&#x4E3A;&#x201C;android.intent.action.MAIN&#x201D;&#xFF0C;&#x7C7B;&#x522B;&#x8BBE;&#x7F6E;&#x4E3A;&#x201C;android.intent.category.LAUNCHER&#x201D;&#xFF0C; &#x53EF;&#x4EE5;&#x4F7F;&#x8FD9;&#x4E2A;ACT(activity)&#x5B9E;&#x4F8B;&#x79F0;&#x4E3A;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#x6808;&#x7684;&#x5165;&#x53E3;)</p>
+<p>&#x200B;    &#x4EFB;&#x52A1;&#x6808;&#x662F;&#x4E00;&#x79CD;&#x201C;&#x540E;&#x8FDB;&#x5148;&#x51FA;&#x201D;&#x7684;&#x6808;&#x7ED3;&#x6784;&#xFF0C;&#x6BCF;&#x6309;&#x4E00;&#x4E0B;back&#x952E;&#x5C31;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;Activity&#x51FA;&#x6808;&#xFF0C;&#x76F4;&#x5230;&#x6808;&#x7A7A;&#x4E3A;&#x6B62;&#xFF0C;&#x5F53;&#x6808;&#x4E2D;&#x65E0;&#x4EFB;&#x4F55;Activity&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7CFB;&#x7EDF;&#x5C31;&#x4F1A;&#x56DE;&#x6536;&#x8FD9;&#x4E2A;&#x4EFB;&#x52A1;&#x6808;&#x3002;</p>
+<p>&#x200B;    &#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6240;&#x6709;Activity&#x6240;&#x9700;&#x7684;&#x4EFB;&#x52A1;&#x6808;&#x7684;&#x540D;&#x5B57;&#x4E3A;&#x5E94;&#x7528;&#x7684;&#x5305;&#x540D;&#x3002;</p>
+</blockquote>
+<ul>
+<li><h3 id="&#x6240;&#x9700;&#x4EFB;&#x52A1;&#x6808;">&#x6240;&#x9700;&#x4EFB;&#x52A1;&#x6808;</h3>
+</li>
+</ul>
+<blockquote>
+<p>&#x4EC0;&#x4E48;&#x662F;Activity&#x6240;&#x9700;&#x8981;&#x7684;&#x4EFB;&#x52A1;&#x6808;&#x5462;&#xFF1F;&#x8FD9;&#x8981;&#x4ECE;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x8BF4;&#x8D77;&#xFF1A;</p>
+<p>&#x200B;    TaskAffinity&#xFF0C;&#x53EF;&#x4EE5;&#x7FFB;&#x8BD1;&#x4E3A;&#x4EFB;&#x52A1;&#x76F8;&#x5173;&#x6027;&#x3002;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x6807;&#x8BC6;&#x4E86;&#x4E00;&#x4E2A;Activity&#x6240;&#x9700;&#x8981;&#x7684;&#x4EFB;&#x52A1;&#x6808;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6240;&#x6709;Activity&#x6240;&#x9700;&#x7684;&#x4EFB;&#x52A1;&#x6808;&#x7684;&#x540D;&#x5B57;&#x4E3A;&#x5E94;&#x7528;&#x7684;&#x5305;&#x540D;&#x3002;</p>
+<p>&#x200B;    &#x5F53;&#x7136;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4E3A;&#x6BCF;&#x4E2A;Activity&#x90FD;&#x5355;&#x72EC;&#x6307;&#x5B9A;TaskAffinity&#x5C5E;&#x6027;&#xFF0C;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x503C;&#x5FC5;&#x987B;&#x4E0D;&#x80FD;&#x548C;&#x5305;&#x540D;&#x76F8;&#x540C;&#xFF0C;&#x5426;&#x5219;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x3002;</p>
+<p>&#x200B;    TaskAffinity&#x5C5E;&#x6027;&#x4E3B;&#x8981;&#x548C;singleTask&#x542F;&#x52A8;&#x6A21;&#x5F0F;&#x6216;&#x8005;allowTaskReparenting&#x5C5E;&#x6027;&#x914D;&#x5BF9;&#x4F7F;&#x7528;&#xFF0C;&#x5728;&#x5176;&#x4ED6;&#x60C5;&#x51B5;&#x4E0B;&#x6CA1;&#x6709;&#x610F;&#x4E49;&#x3002;</p>
+<p><strong>1&#x3001;TaskAffiniity&#x4E0E;singleTask&#x914D;&#x5408;&#x4F7F;&#x7528;&#xFF1A;</strong></p>
+<p>   &#x5F53;TaskAffinity&#x548C;singleTask&#x542F;&#x52A8;&#x6A21;&#x5F0F;&#x914D;&#x5BF9;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5B83;&#x662F;&#x5177;&#x6709;&#x8BE5;&#x6A21;&#x5F0F;&#x7684;Activity&#x7684;&#x76EE;&#x524D;&#x4EFB;&#x52A1;&#x6808;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x5F85;&#x542F;&#x52A8;&#x7684;Activity&#x4F1A;&#x8FD0;&#x884C;&#x5728;&#x540D;&#x5B57;&#x548C;TaskAffinity&#x76F8;&#x540C;&#x7684;&#x4EFB;&#x52A1;&#x6808;&#x4E2D;&#x3002;</p>
+<p>2&#x3001;<strong>TaskAffinity&#x548C;allowTaskReparenting&#x7ED3;&#x5408;&#x4F7F;&#x7528;</strong></p>
+<p>&#x200B;    allowTaskReparenting&#x5C5E;&#x6027;&#xFF0C;&#x5B83;&#x7684;&#x4E3B;&#x8981;&#x4F5C;&#x7528;&#x662F;activity&#x7684;&#x8FC1;&#x79FB;&#xFF0C;&#x5373;&#x4ECE;&#x4E00;&#x4E2A;task&#x8FC1;&#x79FB;&#x5230;&#x53E6;&#x4E00;&#x4E2A;task&#xFF0C;&#x8FD9;&#x4E2A;&#x8FC1;&#x79FB;&#x8DDF;activity&#x7684;taskAffinity&#x6709;&#x5173;&#x3002;&#x5F53;allowTaskReparenting&#x7684;&#x503C;&#x4E3A;&#x201C;true&#x201D;&#x65F6;&#xFF0C;&#x5219;&#x8868;&#x793A;Activity&#x80FD;&#x4ECE;&#x542F;&#x52A8;&#x7684;Task&#x79FB;&#x52A8;&#x5230;&#x6709;&#x7740;affinity&#x7684;Task&#xFF08;&#x5F53;&#x8FD9;&#x4E2A;Task&#x8FDB;&#x5165;&#x5230;&#x524D;&#x53F0;&#x65F6;&#xFF09;&#xFF0C;&#x5F53;allowTaskReparenting&#x7684;&#x503C;&#x4E3A;&#x201C;false&#x201D;&#xFF0C;&#x8868;&#x793A;&#x5B83;&#x5FC5;&#x987B;&#x5446;&#x5728;&#x542F;&#x52A8;&#x65F6;&#x5446;&#x5728;&#x7684;&#x90A3;&#x4E2A;Task&#x91CC;&#x3002;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x7279;&#x6027;&#x6CA1;&#x6709;&#x88AB;&#x8BBE;&#x5B9A;&#xFF0C;&#x5143;&#x7D20;(&#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x4F5C;&#x7528;&#x5728;&#x6BCF;&#x6B21;activity&#x5143;&#x7D20;&#x4E0A;)&#x4E0A;&#x7684;allowTaskReparenting&#x5C5E;&#x6027;&#x7684;&#x503C;&#x4F1A;&#x5E94;&#x7528;&#x5230;Activity&#x4E0A;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;&#x201C;false&#x201D;&#x3002;&#x8FD9;&#x6837;&#x8BF4;&#x53EF;&#x80FD;&#x8FD8;&#x6BD4;&#x8F83;&#x96BE;&#x7406;&#x89E3;&#xFF0C;&#x6211;&#x4EEC;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x6BD4;&#x5982;&#x73B0;&#x5728;&#x6709;&#x4E24;&#x4E2A;&#x5E94;&#x7528;A&#x548C;B&#xFF0C;A&#x542F;&#x52A8;&#x4E86;B&#x7684;&#x4E00;&#x4E2A;ActivityC&#xFF0C;&#x7136;&#x540E;&#x6309;Home&#x952E;&#x56DE;&#x5230;&#x684C;&#x9762;&#xFF0C;&#x518D;&#x5355;&#x51FB;B&#x5E94;&#x7528;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x6B64;&#x65F6;&#xFF0C;allowTaskReparenting&#x7684;&#x503C;&#x4E3A;&#x201C;true&#x201D;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x5E76;&#x4E0D;&#x4F1A;&#x542F;&#x52A8;B&#x7684;&#x4E3B;Activity&#xFF0C;&#x800C;&#x662F;&#x76F4;&#x63A5;&#x663E;&#x793A;&#x5DF2;&#x88AB;&#x5E94;&#x7528;A&#x542F;&#x52A8;&#x7684;ActivityC&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;ActivityC&#x4ECE;A&#x7684;&#x4EFB;&#x52A1;&#x6808;&#x8F6C;&#x79FB;&#x5230;&#x4E86;B&#x7684;&#x4EFB;&#x52A1;&#x6808;&#x4E2D;&#x3002;</p>
+<p>&#x200B;    &#x5982;&#x679C;allowTaskReparenting&#x503C;&#x4E3A;false&#x65F6;&#xFF0C;ActivityC&#x5E76;&#x4E0D;&#x4F1A;&#x76F4;&#x63A5;&#x4ECE;A&#x5E94;&#x7528;&#x7684;&#x4EFB;&#x52A1;&#x6808;&#x8FC1;&#x79FB;&#x5230;B&#x5E94;&#x7528;&#x7684;&#x4EFB;&#x52A1;&#x6808;&#xFF0C;&#x800C;&#x662F;B&#x5E94;&#x7528;&#x76F4;&#x63A5;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x4E86;ActivityC&#x7684;&#x5B9E;&#x4F8B;&#x3002;&#x5230;&#x6B64;&#x6211;&#x4EEC;&#x5BF9;&#x4E8E;allowTaskReparenting&#x548C;taskAffinity&#x5C5E;&#x6027;&#x7684;&#x4E86;&#x89E3;&#x5C31;&#x5DF2;&#x7ECF;&#x76F8;&#x5F53;&#x6DF1;&#x5165;&#x4E86;&#xFF0C;&#x4E0D;&#x8FC7;&#x6709;&#x70B9;&#x9700;&#x8981;&#x8BF4;&#x660E;&#x7684;&#x662F;allowTaskReparenting&#x4EC5;&#x9650;&#x4E8E;singleTop&#x548C;standard&#x6A21;&#x5F0F;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x4E00;&#x4E2A;activity&#x7684;affinity&#x5C5E;&#x6027;&#x7531;&#x5B83;&#x7684;taskAffinity&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#xFF08;&#x4EE3;&#x8868;&#x6808;&#x540D;&#xFF09;&#xFF0C;&#x800C;&#x4E00;&#x4E2A;task&#x7684;affinity&#x7531;&#x5B83;&#x7684;root activity&#x5B9A;&#x4E49;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x4E00;&#x4E2A;task&#x7684;root activity&#x603B;&#x662F;&#x62E5;&#x6709;&#x548C;&#x5B83;&#x6240;&#x5728;task&#x76F8;&#x540C;&#x7684;affinity&#x3002;&#x7531;&#x4E8E;&#x4EE5;singleTask&#x548C;singleInstance&#x542F;&#x52A8;&#x7684;activity&#x53EA;&#x80FD;&#x662F;&#x4E00;&#x4E2A;task&#x7684;root activity&#xFF0C;&#x56E0;&#x6B64;allowTaskReparenting&#x4EC5;&#x9650;&#x4E8E;&#x4EE5;standard &#x548C;singleTop&#x542F;&#x52A8;&#x7684;activity</p>
+</blockquote>
+<ul>
+<li><h3 id="&#x524D;&#x3001;&#x540E;&#x53F0;&#x4EFB;&#x52A1;&#x6808;">&#x524D;&#x3001;&#x540E;&#x53F0;&#x4EFB;&#x52A1;&#x6808;</h3>
+</li>
+</ul>
+<blockquote>
+<p>&#x4EFB;&#x52A1;&#x6808;&#x5206;&#x4E3A;&#x524D;&#x53F0;&#x4EFB;&#x52A1;&#x6808;&#x548C;&#x540E;&#x53F0;&#x4EFB;&#x52A1;&#x6808;&#xFF0C;&#x540E;&#x53F0;&#x4EFB;&#x52A1;&#x6808;&#x4E2D;&#x7684;Activity&#x4F4D;&#x4E8E;&#x6682;&#x505C;&#x72B6;&#x6001;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5207;&#x6362;&#x5C06;&#x540E;&#x53F0;&#x4EFB;&#x52A1;&#x6808;&#x518D;&#x6B21;&#x8C03;&#x5230;&#x524D;&#x53F0;&#x3002;</p>
+</blockquote>
 
                                 
                                 </section>
@@ -563,12 +595,12 @@
 
             
                 
-                <a href="../Service/IntentService源码解析.html" class="navigation navigation-prev " aria-label="Previous page: 【九】IntentService源码解析">
+                <a href="Activity启动模式.html" class="navigation navigation-prev " aria-label="Previous page: 【四】Activity启动模式">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../ImageView/" class="navigation navigation-next " aria-label="Next page: ImageView">
+                <a href="Activity 与 Window、PhoneWindow、DecorView 之间的关系.html" class="navigation navigation-next " aria-label="Next page: 【六】Activity 与 Window、PhoneWindow、DecorView 之间的关系">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -579,7 +611,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"TextView","level":"1.5","depth":1,"next":{"title":"ImageView","level":"1.6","depth":1,"path":"ImageView/README.md","ref":"ImageView/README.md","articles":[{"title":"scaleType","level":"1.6.1","depth":2,"path":"ImageView/scaleType.md","ref":"ImageView/scaleType.md","articles":[]}]},"previous":{"title":"【九】IntentService源码解析","level":"1.4.9","depth":2,"path":"Service/IntentService源码解析.md","ref":"Service/IntentService源码解析.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"TextView/README.md","mtime":"2019-06-10T06:22:22.520Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-10T08:37:27.585Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"【五】Activity任务栈","level":"1.3.5","depth":2,"next":{"title":"【六】Activity 与 Window、PhoneWindow、DecorView 之间的关系","level":"1.3.6","depth":2,"path":"Activity/Activity 与 Window、PhoneWindow、DecorView 之间的关系.md","ref":"Activity/Activity 与 Window、PhoneWindow、DecorView 之间的关系.md","articles":[]},"previous":{"title":"【四】Activity启动模式","level":"1.3.4","depth":2,"path":"Activity/Activity启动模式.md","ref":"Activity/Activity启动模式.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Activity/Activity任务栈.md","mtime":"2019-06-10T07:48:27.258Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-10T08:37:27.585Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

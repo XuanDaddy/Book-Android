@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>TextView · GitBook</title>
+        <title>【四】前台Service · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../ImageView/" />
+    <link rel="next" href="远程Service.html" />
     
     
-    <link rel="prev" href="../Service/IntentService源码解析.html" />
+    <link rel="prev" href="Service与Thread的关系.html" />
     
 
     </head>
@@ -296,9 +296,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../Service/">
+        <li class="chapter " data-level="1.4" data-path="./">
             
-                <a href="../Service/">
+                <a href="./">
             
                     
                     Service
@@ -310,9 +310,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../Service/Service直接运行.html">
+        <li class="chapter " data-level="1.4.1" data-path="Service直接运行.html">
             
-                <a href="../Service/Service直接运行.html">
+                <a href="Service直接运行.html">
             
                     
                     【一】Service直接运行(startService)
@@ -323,9 +323,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../Service/Service与Activity通信.html">
+        <li class="chapter " data-level="1.4.2" data-path="Service与Activity通信.html">
             
-                <a href="../Service/Service与Activity通信.html">
+                <a href="Service与Activity通信.html">
             
                     
                     【二】Service与Activity通信(bindService)
@@ -336,9 +336,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../Service/Service与Thread的关系.html">
+        <li class="chapter " data-level="1.4.3" data-path="Service与Thread的关系.html">
             
-                <a href="../Service/Service与Thread的关系.html">
+                <a href="Service与Thread的关系.html">
             
                     
                     【三】Service与Thread的关系
@@ -349,9 +349,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="../Service/前台Service.html">
+        <li class="chapter active" data-level="1.4.4" data-path="前台Service.html">
             
-                <a href="../Service/前台Service.html">
+                <a href="前台Service.html">
             
                     
                     【四】前台Service
@@ -362,9 +362,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5" data-path="../Service/远程Service.html">
+        <li class="chapter " data-level="1.4.5" data-path="远程Service.html">
             
-                <a href="../Service/远程Service.html">
+                <a href="远程Service.html">
             
                     
                     【五】远程Service
@@ -375,9 +375,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="../Service/AIDL.html">
+        <li class="chapter " data-level="1.4.6" data-path="AIDL.html">
             
-                <a href="../Service/AIDL.html">
+                <a href="AIDL.html">
             
                     
                     【六】AIDL
@@ -388,9 +388,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="../Service/AIDL共享Service.html">
+        <li class="chapter " data-level="1.4.7" data-path="AIDL共享Service.html">
             
-                <a href="../Service/AIDL共享Service.html">
+                <a href="AIDL共享Service.html">
             
                     
                     【七】AIDL共享Service
@@ -401,9 +401,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="../Service/IntentService.html">
+        <li class="chapter " data-level="1.4.8" data-path="IntentService.html">
             
-                <a href="../Service/IntentService.html">
+                <a href="IntentService.html">
             
                     
                     【八】IntentService
@@ -414,9 +414,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.9" data-path="../Service/IntentService源码解析.html">
+        <li class="chapter " data-level="1.4.9" data-path="IntentService源码解析.html">
             
-                <a href="../Service/IntentService源码解析.html">
+                <a href="IntentService源码解析.html">
             
                     
                     【九】IntentService源码解析
@@ -432,9 +432,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5" data-path="./">
+        <li class="chapter " data-level="1.5" data-path="../TextView/">
             
-                <a href="./">
+                <a href="../TextView/">
             
                     
                     TextView
@@ -520,7 +520,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >TextView</a>
+        <a href=".." >【四】前台Service</a>
     </h1>
 </div>
 
@@ -535,7 +535,58 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="textview">TextView</h1>
+                                <h1 id="&#x3010;&#x56DB;&#x3011;&#x524D;&#x53F0;service">&#x3010;&#x56DB;&#x3011;&#x524D;&#x53F0;Service</h1>
+<h4 id="&#x4EC0;&#x4E48;&#x662F;&#x524D;&#x53F0;service">&#x4EC0;&#x4E48;&#x662F;&#x524D;&#x53F0;Service</h4>
+<blockquote>
+<p>Service&#x51E0;&#x4E4E;&#x90FD;&#x662F;&#x5728;&#x540E;&#x53F0;&#x8FD0;&#x884C;&#x7684;&#xFF0C;&#x4E00;&#x76F4;&#x4EE5;&#x6765;&#x5B83;&#x90FD;&#x662F;&#x9ED8;&#x9ED8;&#x5730;&#x505A;&#x7740;&#x8F9B;&#x82E6;&#x7684;&#x5DE5;&#x4F5C;&#x3002;&#x4F46;&#x662F;Service&#x7684;&#x7CFB;&#x7EDF;&#x4F18;&#x5148;&#x7EA7;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x4F4E;&#x7684;&#xFF0C;&#x5F53;&#x7CFB;&#x7EDF;&#x51FA;&#x73B0;&#x5185;&#x5B58;&#x4E0D;&#x8DB3;&#x60C5;&#x51B5;&#x65F6;&#xFF0C;&#x5C31;&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x56DE;&#x6536;&#x6389;&#x6B63;&#x5728;&#x540E;&#x53F0;&#x8FD0;&#x884C;&#x7684;Service&#x3002;&#x5982;&#x679C;&#x4F60;&#x5E0C;&#x671B;Service&#x53EF;&#x4EE5;&#x4E00;&#x76F4;&#x4FDD;&#x6301;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x7531;&#x4E8E;&#x7CFB;&#x7EDF;&#x5185;&#x5B58;&#x4E0D;&#x8DB3;&#x7684;&#x539F;&#x56E0;&#x5BFC;&#x81F4;&#x88AB;&#x56DE;&#x6536;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x4F7F;&#x7528;&#x524D;&#x53F0;Service&#x3002;&#x524D;&#x53F0;Service&#x548C;&#x666E;&#x901A;Service&#x6700;&#x5927;&#x7684;&#x533A;&#x522B;&#x5C31;&#x5728;&#x4E8E;&#xFF0C;&#x5B83;&#x4F1A;&#x4E00;&#x76F4;&#x6709;&#x4E00;&#x4E2A;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x56FE;&#x6807;&#x5728;&#x7CFB;&#x7EDF;&#x7684;&#x72B6;&#x6001;&#x680F;&#x663E;&#x793A;&#xFF0C;&#x4E0B;&#x62C9;&#x72B6;&#x6001;&#x680F;&#x540E;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x66F4;&#x52A0;&#x8BE6;&#x7EC6;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x975E;&#x5E38;&#x7C7B;&#x4F3C;&#x4E8E;&#x901A;&#x77E5;&#x7684;&#x6548;&#x679C;&#x3002;&#x5F53;&#x7136;&#x6709;&#x65F6;&#x5019;&#x4F60;&#x4E5F;&#x53EF;&#x80FD;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x4E3A;&#x4E86;&#x9632;&#x6B62;Service&#x88AB;&#x56DE;&#x6536;&#x624D;&#x4F7F;&#x7528;&#x524D;&#x53F0;Service&#xFF0C;&#x6709;&#x4E9B;&#x9879;&#x76EE;&#x7531;&#x4E8E;&#x7279;&#x6B8A;&#x7684;&#x9700;&#x6C42;&#x4F1A;&#x8981;&#x6C42;&#x5FC5;&#x987B;&#x4F7F;&#x7528;&#x524D;&#x53F0;Service&#xFF0C;&#x6BD4;&#x5982;&#x8BF4;&#x58A8;&#x8FF9;&#x5929;&#x6C14;&#xFF0C;&#x5B83;&#x7684;Service&#x5728;&#x540E;&#x53F0;&#x66F4;&#x65B0;&#x5929;&#x6C14;&#x6570;&#x636E;&#x7684;&#x540C;&#x65F6;&#xFF0C;&#x8FD8;&#x4F1A;&#x5728;&#x7CFB;&#x7EDF;&#x72B6;&#x6001;&#x680F;&#x4E00;&#x76F4;&#x663E;&#x793A;&#x5F53;&#x524D;&#x5929;&#x6C14;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+</blockquote>
+<p><img src="images/&#x524D;&#x53F0;Service.png" alt="image"></p>
+<h4 id="&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x524D;&#x53F0;service">&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x524D;&#x53F0;Service</h4>
+<blockquote>
+<p>&#x9996;&#x5148;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;Notification&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;&#x4E86;&#x5B83;&#x7684;setLatestEventInfo()&#x65B9;&#x6CD5;&#x6765;&#x4E3A;&#x901A;&#x77E5;&#x521D;&#x59CB;&#x5316;&#x5E03;&#x5C40;&#x548C;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x5728;&#x8FD9;&#x91CC;&#x8BBE;&#x7F6E;&#x4E86;&#x70B9;&#x51FB;&#x901A;&#x77E5;&#x540E;&#x5C31;&#x6253;&#x5F00;MainActivity&#x3002;&#x7136;&#x540E;&#x8C03;&#x7528; <strong>startForeground()</strong> &#x65B9;&#x6CD5;&#x5C31;&#x53EF;&#x4EE5;&#x8BA9;MyService&#x53D8;&#x6210;&#x4E00;&#x4E2A;&#x524D;&#x53F0;Service&#xFF0C;&#x5E76;&#x4F1A;&#x5C06;&#x901A;&#x77E5;&#x7684;&#x56FE;&#x7247;&#x663E;&#x793A;&#x51FA;&#x6765;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyService</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Service</span> </span>{
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String TAG = <span class="hljs-string">&quot;MyService&quot;</span>;
+
+    <span class="hljs-keyword">private</span> MyBinder mBinder = <span class="hljs-keyword">new</span> MyBinder();
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">super</span>.onCreate();
+        Notification notification = <span class="hljs-keyword">new</span> Notification(R.drawable.ic_launcher,
+                <span class="hljs-string">&quot;&#x6709;&#x901A;&#x77E5;&#x5230;&#x6765;&quot;</span>, System.currentTimeMillis());
+        Intent notificationIntent = <span class="hljs-keyword">new</span> Intent(<span class="hljs-keyword">this</span>, MainActivity.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(<span class="hljs-keyword">this</span>, <span class="hljs-number">0</span>,
+                notificationIntent, <span class="hljs-number">0</span>);
+        notification.setLatestEventInfo(<span class="hljs-keyword">this</span>, <span class="hljs-string">&quot;&#x8FD9;&#x662F;&#x901A;&#x77E5;&#x7684;&#x6807;&#x9898;&quot;</span>, <span class="hljs-string">&quot;&#x8FD9;&#x662F;&#x901A;&#x77E5;&#x7684;&#x5185;&#x5BB9;&quot;</span>,
+                pendingIntent);
+        startForeground(<span class="hljs-number">1</span>, notification);
+        Log.d(TAG, <span class="hljs-string">&quot;onCreate() executed&quot;</span>);
+    }
+
+    .........
+</code></pre>
+<blockquote>
+<p>&#x73B0;&#x5728;&#x91CD;&#x65B0;&#x8FD0;&#x884C;&#x4E00;&#x4E0B;&#x7A0B;&#x5E8F;&#xFF0C;&#x5E76;&#x70B9;&#x51FB;Start Service&#x6216;Bind Service&#x6309;&#x94AE;&#xFF0C;MyService&#x5C31;&#x4F1A;&#x4EE5;&#x524D;&#x53F0;Service&#x7684;&#x6A21;&#x5F0F;&#x542F;&#x52A8;&#x4E86;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x7CFB;&#x7EDF;&#x72B6;&#x6001;&#x680F;&#x4F1A;&#x5F39;&#x51FA;&#x4E00;&#x4E2A;&#x901A;&#x680F;&#x56FE;&#x6807;&#xFF0C;&#x4E0B;&#x62C9;&#x72B6;&#x6001;&#x680F;&#x540E;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x901A;&#x77E5;&#x7684;&#x8BE6;&#x7EC6;&#x5185;&#x5BB9;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#x3002;</p>
+</blockquote>
+<p><img src="images/&#x524D;&#x53F0;Service2.png" alt="image"></p>
+<h4 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h4>
+<blockquote>
+<ol>
+<li><p>&#x5728; Android O&#xFF08;8.0&#xFF09; &#x4E4B;&#x524D;&#xFF0C;&#x521B;&#x5EFA;&#x524D;&#x53F0;&#x670D;&#x52A1;&#x7684;&#x65B9;&#x5F0F;&#x901A;&#x5E38;&#x662F;&#x5148;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x540E;&#x53F0;&#x670D;&#x52A1;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x8BE5;&#x670D;&#x52A1;&#x63A8;&#x5230;&#x524D;&#x53F0;&#x3002;</p>
+</li>
+<li><p>&#x4F46;&#x5BF9;&#x4E8E; Android O&#xFF0C;&#x7CFB;&#x7EDF;&#x4E0D;&#x5141;&#x8BB8;&#x540E;&#x53F0;&#x5E94;&#x7528;&#x521B;&#x5EFA;&#x540E;&#x53F0;&#x670D;&#x52A1;&#x3002; &#x56E0;&#x6B64;&#xFF0C;Android O &#x5F15;&#x5165;&#x4E86;&#x4E00;&#x79CD;&#x5168;&#x65B0;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5373; </p>
+<p>ContextCompat.startForegroundService()&#xFF0C;&#x4EE5;&#x5728;&#x524D;&#x53F0;&#x542F;&#x52A8;&#x65B0;&#x670D;&#x52A1;&#x3002; </p>
+</li>
+<li><p>&#x8C03;&#x7528; ContextCompat.startForegroundService() <strong>&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x524D;&#x53F0;&#x670D;&#x52A1;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x540E;&#x53F0;&#x670D;&#x52A1;&#x5E76;&#x5C06;&#x5B83;&#x63A8;&#x5230;&#x524D;&#x53F0;</strong>&#x3002;</p>
+</li>
+<li><p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x53EF;&#x89C1;&#x7684; Notification&#x3002;</p>
+</li>
+<li><p>&#x5FC5;&#x987B;&#x7ACB;&#x5373;&#xFF08;&#x5728;5&#x79D2;&#x5185;&#xFF09;&#x8C03;&#x7528;&#x8BE5;&#x670D;&#x52A1;&#x7684; startForeground(id: Int, notification: Notification) &#x65B9;&#x6CD5;&#xFF0C;&#x5426;&#x5219;&#x5C06;&#x505C;&#x6B62;&#x670D;&#x52A1;&#x5E76;&#x629B;&#x51FA; android.app.RemoteServiceException: Context.startForegroundService() did not then call Service.startForeground() &#x5F02;&#x5E38;&#x3002;</p>
+</li>
+</ol>
+</blockquote>
 
                                 
                                 </section>
@@ -563,12 +614,12 @@
 
             
                 
-                <a href="../Service/IntentService源码解析.html" class="navigation navigation-prev " aria-label="Previous page: 【九】IntentService源码解析">
+                <a href="Service与Thread的关系.html" class="navigation navigation-prev " aria-label="Previous page: 【三】Service与Thread的关系">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../ImageView/" class="navigation navigation-next " aria-label="Next page: ImageView">
+                <a href="远程Service.html" class="navigation navigation-next " aria-label="Next page: 【五】远程Service">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -579,7 +630,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"TextView","level":"1.5","depth":1,"next":{"title":"ImageView","level":"1.6","depth":1,"path":"ImageView/README.md","ref":"ImageView/README.md","articles":[{"title":"scaleType","level":"1.6.1","depth":2,"path":"ImageView/scaleType.md","ref":"ImageView/scaleType.md","articles":[]}]},"previous":{"title":"【九】IntentService源码解析","level":"1.4.9","depth":2,"path":"Service/IntentService源码解析.md","ref":"Service/IntentService源码解析.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"TextView/README.md","mtime":"2019-06-10T06:22:22.520Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-10T08:37:27.585Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"【四】前台Service","level":"1.4.4","depth":2,"next":{"title":"【五】远程Service","level":"1.4.5","depth":2,"path":"Service/远程Service.md","ref":"Service/远程Service.md","articles":[]},"previous":{"title":"【三】Service与Thread的关系","level":"1.4.3","depth":2,"path":"Service/Service与Thread的关系.md","ref":"Service/Service与Thread的关系.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Service/前台Service.md","mtime":"2019-06-10T08:19:51.778Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-10T08:37:27.585Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

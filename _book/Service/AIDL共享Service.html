@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>TextView · GitBook</title>
+        <title>【七】AIDL共享Service · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../ImageView/" />
+    <link rel="next" href="IntentService.html" />
     
     
-    <link rel="prev" href="../Service/IntentService源码解析.html" />
+    <link rel="prev" href="AIDL.html" />
     
 
     </head>
@@ -296,9 +296,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../Service/">
+        <li class="chapter " data-level="1.4" data-path="./">
             
-                <a href="../Service/">
+                <a href="./">
             
                     
                     Service
@@ -310,9 +310,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../Service/Service直接运行.html">
+        <li class="chapter " data-level="1.4.1" data-path="Service直接运行.html">
             
-                <a href="../Service/Service直接运行.html">
+                <a href="Service直接运行.html">
             
                     
                     【一】Service直接运行(startService)
@@ -323,9 +323,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../Service/Service与Activity通信.html">
+        <li class="chapter " data-level="1.4.2" data-path="Service与Activity通信.html">
             
-                <a href="../Service/Service与Activity通信.html">
+                <a href="Service与Activity通信.html">
             
                     
                     【二】Service与Activity通信(bindService)
@@ -336,9 +336,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../Service/Service与Thread的关系.html">
+        <li class="chapter " data-level="1.4.3" data-path="Service与Thread的关系.html">
             
-                <a href="../Service/Service与Thread的关系.html">
+                <a href="Service与Thread的关系.html">
             
                     
                     【三】Service与Thread的关系
@@ -349,9 +349,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="../Service/前台Service.html">
+        <li class="chapter " data-level="1.4.4" data-path="前台Service.html">
             
-                <a href="../Service/前台Service.html">
+                <a href="前台Service.html">
             
                     
                     【四】前台Service
@@ -362,9 +362,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5" data-path="../Service/远程Service.html">
+        <li class="chapter " data-level="1.4.5" data-path="远程Service.html">
             
-                <a href="../Service/远程Service.html">
+                <a href="远程Service.html">
             
                     
                     【五】远程Service
@@ -375,9 +375,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="../Service/AIDL.html">
+        <li class="chapter " data-level="1.4.6" data-path="AIDL.html">
             
-                <a href="../Service/AIDL.html">
+                <a href="AIDL.html">
             
                     
                     【六】AIDL
@@ -388,9 +388,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="../Service/AIDL共享Service.html">
+        <li class="chapter active" data-level="1.4.7" data-path="AIDL共享Service.html">
             
-                <a href="../Service/AIDL共享Service.html">
+                <a href="AIDL共享Service.html">
             
                     
                     【七】AIDL共享Service
@@ -401,9 +401,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="../Service/IntentService.html">
+        <li class="chapter " data-level="1.4.8" data-path="IntentService.html">
             
-                <a href="../Service/IntentService.html">
+                <a href="IntentService.html">
             
                     
                     【八】IntentService
@@ -414,9 +414,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.9" data-path="../Service/IntentService源码解析.html">
+        <li class="chapter " data-level="1.4.9" data-path="IntentService源码解析.html">
             
-                <a href="../Service/IntentService源码解析.html">
+                <a href="IntentService源码解析.html">
             
                     
                     【九】IntentService源码解析
@@ -432,9 +432,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5" data-path="./">
+        <li class="chapter " data-level="1.5" data-path="../TextView/">
             
-                <a href="./">
+                <a href="../TextView/">
             
                     
                     TextView
@@ -520,7 +520,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >TextView</a>
+        <a href=".." >【七】AIDL共享Service</a>
     </h1>
 </div>
 
@@ -535,7 +535,96 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="textview">TextView</h1>
+                                <h1 id="&#x3010;&#x4E03;&#x3011;aidl&#x5171;&#x4EAB;service">&#x3010;&#x4E03;&#x3011;AIDL&#x5171;&#x4EAB;Service</h1>
+<h4 id="tips">Tips</h4>
+<blockquote>
+<p>&#x8DE8;&#x8FDB;&#x7A0B;&#x901A;&#x4FE1;&#x7684;&#x771F;&#x6B63;&#x610F;&#x4E49;&#x662F;&#x4E3A;&#x4E86;&#x8BA9;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53BB;&#x8BBF;&#x95EE;&#x53E6;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;Service&#xFF0C;&#x4EE5;&#x5B9E;&#x73B0;&#x5171;&#x4EAB;Service&#x7684;&#x529F;&#x80FD;&#x3002;</p>
+</blockquote>
+<h4 id="&#x540C;&#x4E00;&#x5E94;&#x7528;&#x7ED1;&#x5B9A;service&#x7684;&#x65B9;&#x5F0F;">&#x540C;&#x4E00;&#x5E94;&#x7528;&#x7ED1;&#x5B9A;Service&#x7684;&#x65B9;&#x5F0F;</h4>
+<blockquote>
+<p>&#x5982;&#x679C;&#x60F3;&#x8981;&#x8BA9;Activity&#x4E0E;Service&#x4E4B;&#x95F4;&#x5EFA;&#x7ACB;&#x5173;&#x8054;&#xFF0C;&#x9700;&#x8981;&#x8C03;&#x7528;bindService()&#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x5C06;Intent&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x8FDB;&#x53BB;&#xFF0C;&#x5728;Intent&#x91CC;&#x6307;&#x5B9A;&#x597D;&#x8981;&#x7ED1;&#x5B9A;&#x7684;Service&#x3002;</p>
+</blockquote>
+<pre><code class="lang-java">Intent bindIntent = <span class="hljs-keyword">new</span> Intent(<span class="hljs-keyword">this</span>, MyService.class);
+bindService(bindIntent, connection, BIND_AUTO_CREATE);
+</code></pre>
+<h3 id="&#x4E0D;&#x540C;&#x5E94;&#x7528;&#x7ED1;&#x5B9A;service">&#x4E0D;&#x540C;&#x5E94;&#x7528;&#x7ED1;&#x5B9A;Service</h3>
+<h4 id="&#x9690;&#x5F0F;&#x58F0;&#x660E;">&#x9690;&#x5F0F;&#x58F0;&#x660E;</h4>
+<blockquote>
+<p>&#x8FD9;&#x91CC;&#x5728;&#x6784;&#x5EFA;Intent&#x7684;&#x65F6;&#x5019;&#x662F;&#x4F7F;&#x7528;MyService.class&#x6765;&#x6307;&#x5B9A;&#x8981;&#x7ED1;&#x5B9A;&#x54EA;&#x4E00;&#x4E2A;Service&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x53E6;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x53BB;&#x7ED1;&#x5B9A;Service&#x7684;&#x65F6;&#x5019;&#x5E76;&#x6CA1;&#x6709;MyService&#x8FD9;&#x4E2A;&#x7C7B;&#xFF0C;&#x8FD9;&#x65F6;&#x5C31;&#x5FC5;&#x987B;&#x4F7F;&#x7528;&#x5230;&#x9690;&#x5F0F;Intent&#x4E86;&#x3002;&#x73B0;&#x5728;&#x4FEE;&#x6539;AndroidManifest.xml&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x7ED9;MyService&#x52A0;&#x4E0A;&#x4E00;&#x4E2A;action&#x3002;&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#xFF0C;MyService&#x53EF;&#x4EE5;&#x54CD;&#x5E94;&#x5E26;&#x6709;com.example.servicetest.MyAIDLService&#x8FD9;&#x4E2A;action&#x7684;Intent&#x3002;</p>
+</blockquote>
+<pre><code class="lang-java">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    package=&quot;com.example.servicetest&quot;
+    android:versionCode=&quot;1&quot;
+    android:versionName=&quot;1.0&quot; &gt;
+
+    ......
+
+    &lt;service
+        android:name=&quot;com.example.servicetest.MyService&quot;
+        android:process=&quot;:remote&quot; &gt;
+        &lt;intent-filter&gt;
+            &lt;action android:name=&quot;com.example.servicetest.MyAIDLService&quot;/&gt;
+        &lt;/intent-filter&gt;
+    &lt;/service&gt;
+
+&lt;/manifest&gt;
+</code></pre>
+<h4 id="&#x65B0;&#x5E94;&#x7528;&#x5EFA;&#x7ACB;service&#x5173;&#x8054;">&#x65B0;&#x5E94;&#x7528;&#x5EFA;&#x7ACB;Service&#x5173;&#x8054;</h4>
+<blockquote>
+<ol>
+<li>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;Android&#x9879;&#x76EE;&#xFF0C;&#x8D77;&#x540D;&#x4E3A;ClientTest&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x5C1D;&#x8BD5;&#x5728;&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x4E2D;&#x8FDC;&#x7A0B;&#x8C03;&#x7528;MyService&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x3002;</li>
+<li>&#x5C06;MyAIDLService.aidl&#x6587;&#x4EF6;&#x4ECE;ServiceTest&#x9879;&#x76EE;&#x4E2D;&#x62F7;&#x8D1D;&#x8FC7;&#x6765;&#xFF0C;&#x6CE8;&#x610F;&#x8981;&#x5C06;&#x539F;&#x6709;&#x7684;&#x5305;&#x8DEF;&#x5F84;&#x4E00;&#x8D77;&#x62F7;&#x8D1D;&#x8FC7;&#x6765;&#x3002;</li>
+</ol>
+</blockquote>
+<h4 id="&#x8FDC;&#x7A0B;&#x8C03;&#x7528;">&#x8FDC;&#x7A0B;&#x8C03;&#x7528;</h4>
+<blockquote>
+<p>&#x8FD9;&#x548C;&#x5728;&#x540C;&#x4E00;&#x5E94;&#x7528;&#x7684;&#x4EE3;&#x7801;&#x51E0;&#x4E4E;&#x662F;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#x7684;&#xFF0C;&#x53EA;&#x662F;&#x5728;&#x8BA9;Activity&#x548C;Service&#x5EFA;&#x7ACB;&#x5173;&#x8054;&#x7684;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x4E86;&#x9690;&#x5F0F;Intent&#xFF0C;&#x5C06;Intent&#x7684;action&#x6307;&#x5B9A;&#x6210;&#x4E86;com.example.servicetest.MyAIDLService&#x3002;&#x5728;&#x5F53;&#x524D;Activity&#x548C;MyService&#x5EFA;&#x7ACB;&#x5173;&#x8054;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x4ECD;&#x7136;&#x662F;&#x8C03;&#x7528;&#x4E86;plus()&#x548C;toUpperCase()&#x8FD9;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x8FDC;&#x7A0B;&#x7684;MyService&#x4F1A;&#x5BF9;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x5E76;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF0C;&#x7136;&#x540E;&#x67E5;&#x770B;&#x7ED3;&#x679C;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Activity</span> </span>{
+
+    <span class="hljs-keyword">private</span> MyAIDLService myAIDLService;
+
+    <span class="hljs-keyword">private</span> ServiceConnection connection = <span class="hljs-keyword">new</span> ServiceConnection() {
+
+        <span class="hljs-meta">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onServiceDisconnected</span><span class="hljs-params">(ComponentName name)</span> </span>{
+        }
+
+        <span class="hljs-meta">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onServiceConnected</span><span class="hljs-params">(ComponentName name, IBinder service)</span> </span>{
+            myAIDLService = MyAIDLService.Stub.asInterface(service);
+            <span class="hljs-keyword">try</span> {
+                <span class="hljs-keyword">int</span> result = myAIDLService.plus(<span class="hljs-number">50</span>, <span class="hljs-number">50</span>);
+                String upperStr = myAIDLService.toUpperCase(<span class="hljs-string">&quot;comes from ClientTest&quot;</span>);
+                Log.d(<span class="hljs-string">&quot;TAG&quot;</span>, <span class="hljs-string">&quot;result is &quot;</span> + result);
+                Log.d(<span class="hljs-string">&quot;TAG&quot;</span>, <span class="hljs-string">&quot;upperStr is &quot;</span> + upperStr);
+            } <span class="hljs-keyword">catch</span> (RemoteException e) {
+                e.printStackTrace();
+            }
+        }
+    };
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(Bundle savedInstanceState)</span> </span>{
+        <span class="hljs-keyword">super</span>.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Button bindService = (Button) findViewById(R.id.bind_service);
+        bindService.setOnClickListener(<span class="hljs-keyword">new</span> OnClickListener() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onClick</span><span class="hljs-params">(View v)</span> </span>{
+                Intent intent = <span class="hljs-keyword">new</span> Intent(<span class="hljs-string">&quot;com.example.servicetest.MyAIDLService&quot;</span>);
+                bindService(intent, connection, BIND_AUTO_CREATE);
+            }
+        });
+    }
+
+}
+</code></pre>
+<h4 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h4>
+<blockquote>
+<p>&#x7531;&#x4E8E;&#x8FD9;&#x662F;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x8FDB;&#x7A0B;&#x4E4B;&#x95F4;&#x4F20;&#x9012;&#x6570;&#x636E;&#xFF0C;Android&#x5BF9;&#x8FD9;&#x7C7B;&#x6570;&#x636E;&#x7684;&#x683C;&#x5F0F;&#x652F;&#x6301;&#x662F;&#x975E;&#x5E38;&#x6709;&#x9650;&#x7684;&#xFF0C;&#x57FA;&#x672C;&#x4E0A;&#x53EA;&#x80FD;&#x4F20;&#x9012;Java&#x7684;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x3001;List&#x6216;Map&#x7B49;&#x3002;&#x90A3;&#x4E48;&#x5982;&#x679C;&#x6211;&#x60F3;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x7C7B;&#x8BE5;&#x600E;&#x4E48;&#x529E;&#x5462;&#xFF1F;&#x8FD9;&#x5C31;&#x5FC5;&#x987B;&#x8981;&#x8BA9;&#x8FD9;&#x4E2A;&#x7C7B;&#x53BB;&#x5B9E;&#x73B0;Parcelable&#x63A5;&#x53E3;&#xFF0C;&#x5E76;&#x4E14;&#x8981;&#x7ED9;&#x8FD9;&#x4E2A;&#x7C7B;&#x4E5F;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x540C;&#x540D;&#x7684;AIDL&#x6587;&#x4EF6;&#x3002;</p>
+</blockquote>
 
                                 
                                 </section>
@@ -563,12 +652,12 @@
 
             
                 
-                <a href="../Service/IntentService源码解析.html" class="navigation navigation-prev " aria-label="Previous page: 【九】IntentService源码解析">
+                <a href="AIDL.html" class="navigation navigation-prev " aria-label="Previous page: 【六】AIDL">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../ImageView/" class="navigation navigation-next " aria-label="Next page: ImageView">
+                <a href="IntentService.html" class="navigation navigation-next " aria-label="Next page: 【八】IntentService">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -579,7 +668,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"TextView","level":"1.5","depth":1,"next":{"title":"ImageView","level":"1.6","depth":1,"path":"ImageView/README.md","ref":"ImageView/README.md","articles":[{"title":"scaleType","level":"1.6.1","depth":2,"path":"ImageView/scaleType.md","ref":"ImageView/scaleType.md","articles":[]}]},"previous":{"title":"【九】IntentService源码解析","level":"1.4.9","depth":2,"path":"Service/IntentService源码解析.md","ref":"Service/IntentService源码解析.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"TextView/README.md","mtime":"2019-06-10T06:22:22.520Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-10T08:37:27.585Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"【七】AIDL共享Service","level":"1.4.7","depth":2,"next":{"title":"【八】IntentService","level":"1.4.8","depth":2,"path":"Service/IntentService.md","ref":"Service/IntentService.md","articles":[]},"previous":{"title":"【六】AIDL","level":"1.4.6","depth":2,"path":"Service/AIDL.md","ref":"Service/AIDL.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Service/AIDL共享Service.md","mtime":"2019-06-10T08:26:38.632Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-10T08:37:27.585Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
