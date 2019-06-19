@@ -60,16 +60,6 @@
 * [ImageView](ImageView/README.md)
     * [scaleType](ImageView/scaleType.md)
 * [ViewPager](ViewPager/README.md)
-* 性能优化
-* [App启动优化](AppLanuch/README.md)
-    * [【一】启动分类](AppLanuch/启动分类.md)
-* [App内存优化](AppMerory/README.md)
-* [App布局优化](AppLayout/README.md)
-* [App卡顿优化](AppCarton/README.md)
-* [App线程优化](AppThread/README.md)
-* [App网络优化](AppNetwork/README.md)
-* [App电量优化](AppBattery/README.md)
-    * [【一】优化方案](AppBattery/优化方案.md)
 * Java知识
 * [Java引用](JavaReference/README.md)
     * [【一】引用概述](JavaReference/引用概述.md)
